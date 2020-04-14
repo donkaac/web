@@ -1,0 +1,7 @@
+/src/main/webapp/assets/vendor/
+/web.iml
+/.idea/
+/src/main/webapp/admin/build/
+/src/main/webapp/admin/dist/
+/src/main/webapp/admin/plugins/
+/target/
