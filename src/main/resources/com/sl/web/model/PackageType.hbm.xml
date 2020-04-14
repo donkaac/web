@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.sl.web.model.PackageType" table="package_type" schema="webdb">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="packageType">
+            <column name="package_type" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="text" not-null="true"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <set name="serviceProvidersById" inverse="true">
+            <key>
+                <column name="package_type_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.sl.web.model.ServiceProvider"/>
+        </set>
+    </class>
+</hibernate-mapping>

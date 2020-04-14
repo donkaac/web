@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.sl.web.model.QuickIndexImages" table="quick_index_images" schema="webdb">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="path">
+            <column name="path" sql-type="text" not-null="true"/>
+        </property>
+        <property name="quickIndexId" insert="false" update="false">
+            <column name="quick_index_id" sql-type="int(11)"/>
+        </property>
+        <many-to-one name="quickIndexByQuickIndexId" class="com.sl.web.model.QuickIndex">
+            <column name="quick_index_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

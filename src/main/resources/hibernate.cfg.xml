@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/webdb?useSSL=false</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">1234</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping resource="com/sl/web/model/Comments.hbm.xml"/>
+    <mapping resource="com/sl/web/model/Document.hbm.xml"/>
+    <mapping resource="com/sl/web/model/DocumentImages.hbm.xml"/>
+    <mapping resource="com/sl/web/model/Menu.hbm.xml"/>
+    <mapping resource="com/sl/web/model/News.hbm.xml"/>
+    <mapping resource="com/sl/web/model/NewsImages.hbm.xml"/>
+    <mapping resource="com/sl/web/model/Overview.hbm.xml"/>
+    <mapping resource="com/sl/web/model/OverviewImages.hbm.xml"/>
+    <mapping resource="com/sl/web/model/PackageType.hbm.xml"/>
+    <mapping resource="com/sl/web/model/QuickIndex.hbm.xml"/>
+    <mapping resource="com/sl/web/model/QuickIndexImages.hbm.xml"/>
+    <mapping resource="com/sl/web/model/Service.hbm.xml"/>
+    <mapping resource="com/sl/web/model/ServiceImages.hbm.xml"/>
+    <mapping resource="com/sl/web/model/ServiceProvider.hbm.xml"/>
+    <mapping resource="com/sl/web/model/ServiceProviderImages.hbm.xml"/>
+    <mapping resource="com/sl/web/model/User.hbm.xml"/>
+
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

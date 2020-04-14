@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.sl.web.model.Overview" table="overview" schema="webdb">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="title">
+            <column name="title" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="subtitle">
+            <column name="subtitle" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="mainImage">
+            <column name="main_image" sql-type="text" not-null="true"/>
+        </property>
+        <property name="link">
+            <column name="link" sql-type="text" not-null="true"/>
+        </property>
+        <property name="content">
+            <column name="content" sql-type="text" not-null="true"/>
+        </property>
+        <property name="subOverview">
+            <column name="sub_overview" sql-type="text" not-null="true"/>
+        </property>
+        <property name="parent">
+            <column name="parent" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <set name="overviewImagesById" inverse="true">
+            <key>
+                <column name="overview_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.sl.web.model.OverviewImages"/>
+        </set>
+    </class>
+</hibernate-mapping>

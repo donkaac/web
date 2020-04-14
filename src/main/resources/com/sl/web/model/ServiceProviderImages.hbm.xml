@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.sl.web.model.ServiceProviderImages" table="service_provider_images" schema="webdb">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="path">
+            <column name="path" sql-type="text" not-null="true"/>
+        </property>
+        <property name="isLogo">
+            <column name="isLogo" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="serviceProviderId" insert="false" update="false">
+            <column name="service_provider_id" sql-type="int(11)"/>
+        </property>
+        <many-to-one name="serviceProviderByServiceProviderId" class="com.sl.web.model.ServiceProvider">
+            <column name="service_provider_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
