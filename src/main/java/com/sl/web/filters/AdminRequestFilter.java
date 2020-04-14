@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName = "AdminRequestFilter", urlPatterns = "/admin/*")
+@WebFilter(filterName = "AdminRequestFilter", urlPatterns = "/web/*")
 public class AdminRequestFilter implements Filter {
     public void destroy() {
     }
