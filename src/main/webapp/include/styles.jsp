@@ -24,9 +24,3 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-    * Template Name: Maxim - v2.1.0
-    * Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->

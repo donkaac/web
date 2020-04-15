@@ -3,7 +3,6 @@
     <div class="container d-flex">
 
         <div class="logo mr-auto">
-            <!--        <h1 class="text-light"><a href="index.html">Maxim</a></h1>-->
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="index.html"><img src="assets/img/logo.jpg" alt="" class="img-fluid"></a>
         </div>
