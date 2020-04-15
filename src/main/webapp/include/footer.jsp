@@ -6,12 +6,12 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
-                        <h3>Maxim</h3>
+                        <h3>Wildlife and Nature Conservation Ceylon PVT(LTD)</h3>
                         <p>
-                            A108 Adam Street <br>
-                            NY 535022, USA<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            5B, Arama Road, <br>
+                            Koraleima, Sri Lanka<br><br>
+                            <strong>Phone:</strong> +94 77 888 9722<br>
+                            <strong>Email:</strong> info@infosrilanka.com<br>
                         </p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -24,30 +24,34 @@
                 </div>
 
                 <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4>INFO SRI LANKA</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Tours</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Essence</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Our Services</h4>
+                    <h4>OTHER NATIONAL PARKS</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                    </ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Yala National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">WilpahthuNational Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Wasgamuwa National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Kumana National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Galoya National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Lahugala National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Maduru oya National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Flood Plains National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Somawathiya National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Horton Plains</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Bundala National Park</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Lunugamwehera National Park</a></li>
+                      </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <h4>OUR NEWSLETTER</h4>
+                    <p>Subscribe to our newsletter and stay updated on the latest developments and news!</p>
                     <form action="" method="post">
                         <input type="email" name="email"><input type="submit" value="Subscribe">
                     </form>
@@ -60,7 +64,7 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Wildlife and Nature Conservation 2020</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Wildlife and Nature Conservation Ceylon 2020</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
@@ -73,3 +77,5 @@
         </div>
     </div>
 </footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
