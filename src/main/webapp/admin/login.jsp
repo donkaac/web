@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lakdimuthu
@@ -28,7 +29,16 @@
     <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Sign in to start your session</p>
+            <c:if test="${not empty sessionScope['message']}">
+                <div class="alert alert-${sessionScope['message'].messageType.value} alert-dismissible fade show" role="alert">
+                    ${sessionScope["message"].message}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
+                <c:remove var="message" scope="session"/>
+            </c:if>
             <form action="${pageContext.request.contextPath}/login" method="post">
                 <div class="input-group mb-3">
                     <input type="email" name="email" class="form-control" placeholder="Email">

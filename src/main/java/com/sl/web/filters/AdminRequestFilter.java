@@ -13,7 +13,7 @@ import java.util.Set;
 
 @WebFilter(filterName = "AdminRequestFilter", urlPatterns = "/admin/*")
 public class AdminRequestFilter implements Filter {
-    public static String[] ALLOWED_PATH = {"", "/build", "/dist", "/plugins", "/includes"};
+    public static String[] ALLOWED_PATH = {"/login","/build", "/dist", "/plugins", "/includes"};
 
     public void destroy() {
     }
