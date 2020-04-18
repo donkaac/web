@@ -39,7 +39,7 @@
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Add New</a></li>
+                    <li><a href="overview/add.jsp">Add New</a></li>
                     <li><a href="#">View All</a></li>
                 </ul>
             </li>
