@@ -14,6 +14,7 @@
 
     <title>AdminLTE 3 | Starter</title>
     <%@ include file="../includes/styles.jsp" %>
+    <link rel="stylesheet" href="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -66,8 +67,11 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Main Image</label>
-                                    <input type="file" id="exampleInputFile" accept="image/png, image/jpeg">
+                                    <label >Main Image</label>
+                                    <div class="input-images">
+
+                                    </div>
+                                    <%--<input type="file" id="exampleInputFile" accept="image/png, image/jpeg">--%>
                                 </div>
 
                                 <div class="form-group">
@@ -193,5 +197,12 @@
 </div>
 
 <%@include file="../includes/scripts.jsp" %>
+<%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
+<script type="text/javascript" src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"/>
+<script>
+    $(function () {
+    console.log("OKKKKKKKKKKKKKKKKK");
+    })
+</script>
 </body>
 </html>
