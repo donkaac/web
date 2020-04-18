@@ -15,7 +15,7 @@
     <title>AdminLTE 3 | Starter</title>
     <%@ include file="includes/styles.jsp" %>
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
     <%@include file="includes/header.jsp" %>
     <%@include file="includes/sidebar.jsp" %>
