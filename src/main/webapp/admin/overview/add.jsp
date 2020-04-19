@@ -44,8 +44,10 @@
                     <h3 class="box-title">OverView</h3>
 
                     <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i>
+                        </button>
                     </div>
                 </div>
                 <!-- /.box-header -->
@@ -53,7 +55,6 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-
                                 <div class="form-group">
                                     <label>Title</label>
                                     <input type="text" class="form-control" placeholder="Enter title here..">
@@ -67,13 +68,10 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="form-group">
-                                    <label >Main Image</label>
-                                    <div class="input-images">
-
-                                    </div>
-                                    <%--<input type="file" id="exampleInputFile" accept="image/png, image/jpeg">--%>
+                                    <label>Main Image</label>
+                                    <input type="file" id="inputFile" accept="image/png, image/jpeg">
+                                    <img class="image-preview" style="width: 100px;height: 100px"/>
                                 </div>
-
                                 <div class="form-group">
                                     <label>Link</label>
                                     <input type="text" class="form-control" placeholder="Enter link here..">
@@ -85,7 +83,8 @@
                             <div class="form-group">
                                 <div class="form-group">
                                     <label>Content</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter content here.."></textarea>
+                                    <textarea class="form-control" rows="3"
+                                              placeholder="Enter content here.."></textarea>
                                 </div>
 
 
@@ -96,7 +95,8 @@
 
                                 <div class="form-group">
                                     <label>Parent</label>
-                                    <textarea class="form-control" rows="3" placeholder="Enter parent here.."></textarea>
+                                    <textarea class="form-control" rows="3"
+                                              placeholder="Enter parent here.."></textarea>
                                 </div>
                             </div>
                         </div>
@@ -197,11 +197,31 @@
 </div>
 
 <%@include file="../includes/scripts.jsp" %>
-<%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
-<script type="text/javascript" src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"/>
+
+<script type="text/javascript"
+        src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"></script>
 <script>
     $(function () {
-    console.log("OKKKKKKKKKKKKKKKKK");
+        $(".input-images").imageUploader();
+
+        $("#inputFile").change(function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.addEventListener("load", function () {
+                    $(".image-preview").attr("src",this.result);
+                    //previewImage.setAttribute("src", this.result);
+                });
+
+                reader.readAsDataURL(file);
+            } else {
+//                previewDefaultText.style.display = null;
+//                previewImage.style.display = null;
+//                previewImage.setAttribute("src", "");
+            }
+        });
     })
 </script>
 </body>
