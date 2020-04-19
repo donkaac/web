@@ -7,6 +7,7 @@
     <class name="com.sl.web.model.News" table="news" schema="webdb">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
+            <generator class="identity" />
         </id>
         <property name="title">
             <column name="title" sql-type="varchar(45)" length="45" not-null="true"/>

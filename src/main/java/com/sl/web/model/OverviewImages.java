@@ -1,7 +1,7 @@
 package com.sl.web.model;
 
 /**
- * Created by Achi on 4/14/2020.
+ * Created by Achi on 4/19/2020.
  */
 public class OverviewImages {
     private Integer id;

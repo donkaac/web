@@ -1,4 +1,4 @@
-package com.sl.web.listeners; /**
+package com.sl.web.listener; /**
  * Created by Achi on 4/18/2020.
  */
 
@@ -6,10 +6,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
-import javax.servlet.http.HttpSessionAttributeListener;
-import javax.servlet.http.HttpSessionEvent;
-import javax.servlet.http.HttpSessionListener;
-import javax.servlet.http.HttpSessionBindingEvent;
 
 @WebListener
 public class AppContextListener implements ServletContextListener{
