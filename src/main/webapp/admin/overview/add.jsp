@@ -199,10 +199,5 @@
 <%@include file="../includes/scripts.jsp" %>
 <%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
 <script type="text/javascript" src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"/>
-<script>
-    $(function () {
-    console.log("OKKKKKKKKKKKKKKKKK");
-    })
-</script>
 </body>
 </html>
