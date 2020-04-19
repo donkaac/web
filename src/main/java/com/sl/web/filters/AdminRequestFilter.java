@@ -42,7 +42,7 @@ public class AdminRequestFilter implements Filter {
         if (loggedIn || allowedPath) {
             chain.doFilter(req, resp);
         } else {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect(request.getContextPath()+"/admin/login.jsp");
         }
 
     }
