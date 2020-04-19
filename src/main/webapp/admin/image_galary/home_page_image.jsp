@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: RAC
-  Date: 4/11/2020
-  Time: 2:13 PM
+  User: Lakdimuthu
+  Date: 4/19/2020
+  Time: 7:31 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -35,13 +35,12 @@
             </ol>
         </section>
 
-        <!--------------------------------- Main content -------------------------------------------------------------->
+        <!-------------------------------------- Main content --------------------------------------------------------->
         <section class="content container-fluid">
 
-            <!-- OverView-->
             <div class="box box-warning">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Title Registration</h3>
+                    <h3 class="box-title">Upload Home Page Image</h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -56,55 +55,44 @@
                 <div class="box-body">
                     <form role="form">
                         <!-- text input -->
+
                         <div class="form-group">
-                            <label>Title</label>
-                            <input type="text" class="form-control" placeholder="Enter title...">
-                        </div>
-                        <div class="form-group">
-                            <label>Sub Title</label>
-                            <input type="text" class="form-control" placeholder="Enter sub title..." >
-                        </div>
-                        <div class="form-group">
-                            <label >Choose Overview main image</label>
+                            <label >Choose Home Page Main Image</label>
                             <div class="main-image">
 
                             </div>
                         </div>
 
                         <div class="btn-toolbar ">
-                            <button class="btn btn-success">Save</button>
-                            <button class="btn btn-warning">Update</button>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-info">Search</button>
+                            <button class="btn btn-success">Save Image</button>
                         </div>
-                            <!-- /btn-group -->
+                        <!-- /btn-group -->
 
 
                     </form>
                 </div>
 
-
             </div>
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Upload Home Page Image</h3>
 
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                    title="Collapse">
+                                <i class="fa fa-minus"></i></button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                                <i class="fa fa-times"></i></button>
 
-            <div class="box box-warning">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Add Contents and Images</h3>
-
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                                title="Collapse">
-                            <i class="fa fa-minus"></i></button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fa fa-times"></i></button>
+                        </div>
                     </div>
-                </div>
-                <!-- /.box-header -->
 
                 <div class="box-body">
                     <form role="form">
+                        <!-- text input -->
+
                         <div class="form-group">
-                            <label>Title</label>
+                            <label>Select Active Image</label>
                             <select class="form-control">
                                 <option>Title 1</option>
                                 <option>Title 2</option>
@@ -114,33 +102,21 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label>Sub Topic</label>
-                            <input type="text" class="form-control" placeholder="Enter sub title..." >
+                        <div class="btn-toolbar ">
+                            <button class="btn btn-success">Save As Active Image</button>
                         </div>
-
-                        <!-- textarea -->
-                        <div class="form-group">
-                            <label>Content</label>
-                            <textarea class="form-control" rows="3" placeholder="Enter content..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label >Choose content images</label>
-                            <div class="content-images"></div>
-                        </div>
+                        <!-- /btn-group -->
 
 
-                <div class="btn-toolbar ">
-                    <button class="btn btn-success">Save</button>
-                    <button class="btn btn-warning">Update</button>
-                    <button class="btn btn-danger">Delete</button>
-                    <button class="btn btn-info">Search</button>
-                </div>
                     </form>
                 </div>
+                </div>
             </div>
+
+
+
         </section>
-        <!----------------------------------------- /.content --------------------------------------------------------->
+        <!------------------------------------ /.content -------------------------------------------------------------->
     </div>
     <!-- /.content-wrapper -->
 

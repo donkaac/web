@@ -76,6 +76,29 @@
                     <li><a href="${ROOT_ADMIN}user/password.jsp">Change Password</a></li>
                 </ul>
             </li>
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-plus-square"></i> <span>Quick Index</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${ROOT_ADMIN}">Add Quick Index</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-plus-square"></i> <span>Image Galary</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${ROOT_ADMIN}image_galary/home_page_image.jsp">Add Home Page Image</a></li>
+                    <li><a href="${ROOT_ADMIN}">Add Image Galary Images</a></li>
+                </ul>
+            </li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>
