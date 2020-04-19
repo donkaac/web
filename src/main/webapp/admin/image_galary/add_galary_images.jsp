@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Lakdimuthu
   Date: 4/19/2020
-  Time: 7:31 PM
+  Time: 7:50 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -40,7 +40,7 @@
 
             <div class="box box-warning">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Upload Home Page Image</h3>
+                    <h3 class="box-title">Upload Galary Image</h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -57,64 +57,18 @@
                         <!-- text input -->
 
                         <div class="form-group">
-                            <label >Choose Home Page Main Image</label>
+                            <label >Upload Images</label>
                             <div class="main-image">
 
                             </div>
                         </div>
 
                         <div class="btn-toolbar ">
-                            <button class="btn btn-success">Save Image</button>
+                            <button class="btn btn-success">Save Images</button>
                         </div>
                         <!-- /btn-group -->
-
-
-                    </form>
+      </form>
                 </div>
-
-            </div>
-                <div class="box box-warning">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Set Home Page Main Image</h3>
-
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                                    title="Collapse">
-                                <i class="fa fa-minus"></i></button>
-                            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                                <i class="fa fa-times"></i></button>
-
-                        </div>
-                    </div>
-
-                <div class="box-body">
-                    <form role="form">
-                        <!-- text input -->
-
-                        <div class="form-group">
-                            <label>Select Active Image</label>
-                            <select class="form-control">
-                                <option>Title 1</option>
-                                <option>Title 2</option>
-                                <option>Title 3</option>
-                                <option>Title 4</option>
-                                <option>Title 5</option>
-                            </select>
-                        </div>
-
-                        <div class="btn-toolbar ">
-                            <button class="btn btn-success">Save As Active Image</button>
-                        </div>
-                        <!-- /btn-group -->
-
-
-                    </form>
-                </div>
-                </div>
-
-
-
-
         </section>
         <!------------------------------------ /.content -------------------------------------------------------------->
     </div>

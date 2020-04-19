@@ -96,7 +96,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${ROOT_ADMIN}image_galary/home_page_image.jsp">Add Home Page Image</a></li>
-                    <li><a href="${ROOT_ADMIN}">Add Image Galary Images</a></li>
+                    <li><a href="${ROOT_ADMIN}image_galary/add_galary_images.jsp">Add Image Galary Images</a></li>
                 </ul>
             </li>
         </ul>
