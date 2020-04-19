@@ -35,13 +35,13 @@
             </ol>
         </section>
 
-        <!-- Main content -->
+        <!------------------------------------------- Main content ---------------------------------------------------------------------------------->
         <section class="content container-fluid">
 
-            <!-- OverView-->
             <div class="box box-warning">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Title Registration</h3>
+                    <h3 class="box-title">Service Provider Category</h3>
+
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -49,26 +49,91 @@
                             <i class="fa fa-minus"></i></button>
                         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
                             <i class="fa fa-times"></i></button>
-
                     </div>
                 </div>
+
                 <!-- /.box-header -->
                 <div class="box-body">
                     <form role="form">
                         <!-- text input -->
                         <div class="form-group">
-                            <label>Title</label>
+                            <label>Category</label>
                             <input type="text" class="form-control" placeholder="Enter title...">
                         </div>
                         <div class="form-group">
-                            <label>Sub Title</label>
+                            <label>Sub Category</label>
                             <input type="text" class="form-control" placeholder="Enter sub title..." >
                         </div>
                         <div class="form-group">
-                            <label >Choose Overview main image</label>
-                            <div class="main-image">
+                        <div class="main-image">
+                        </div>
+                        </div>
+                        <div class="btn-toolbar ">
+                            <button class="btn btn-success">Save</button>
+                            <button class="btn btn-warning">Update</button>
+                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-info">Search</button>
+                        </div>
 
-                            </div>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Service Provider Registration</h3>
+
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                            <i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                            <i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form role="form">
+                        <!-- text input -->
+                        <div class="form-group">
+                            <label>Service Provider Name </label>
+                            <input type="text" class="form-control" placeholder="Enter Provider Name...">
+                        </div>
+                        <div class="form-group">
+                            <label>Key Contact Person</label>
+                            <input type="text" class="form-control" placeholder="Enter sub title..." >
+                        </div>
+                        <div class="form-group">
+                            <label>Land Phone No</label>
+                            <input type="text" class="form-control" placeholder="Enter land phone no..." >
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile No</label>
+                            <input type="text" class="form-control" placeholder="Enter mobile..." >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="control-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Enter email...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Web Site</label>
+                            <input type="text" class="form-control" placeholder="Enter web site..." >
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter Address..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="6" placeholder="Enter Description..."></textarea>
                         </div>
 
                         <div class="btn-toolbar ">
@@ -77,19 +142,15 @@
                             <button class="btn btn-danger">Delete</button>
                             <button class="btn btn-info">Search</button>
                         </div>
-                            <!-- /btn-group -->
-
 
                     </form>
                 </div>
-
-
             </div>
-
 
             <div class="box box-warning">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Add Contents and Images</h3>
+                    <h3 class="box-title">Service Provider Images</h3>
+
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -99,12 +160,13 @@
                             <i class="fa fa-times"></i></button>
                     </div>
                 </div>
+
                 <!-- /.box-header -->
 
                 <div class="box-body">
                     <form role="form">
                         <div class="form-group">
-                            <label>Title</label>
+                            <label>Service Provider Categoty</label>
                             <select class="form-control">
                                 <option>Title 1</option>
                                 <option>Title 2</option>
@@ -113,6 +175,18 @@
                                 <option>Title 5</option>
                             </select>
                         </div>
+
+                        <div class="form-group">
+                            <label>Service Provider Name</label>
+                            <select class="form-control">
+                                <option>Title 1</option>
+                                <option>Title 2</option>
+                                <option>Title 3</option>
+                                <option>Title 4</option>
+                                <option>Title 5</option>
+                            </select>
+                        </div>
+
 
                         <div class="form-group">
                             <label>Sub Topic</label>
@@ -125,22 +199,27 @@
                             <textarea class="form-control" rows="3" placeholder="Enter content..."></textarea>
                         </div>
                         <div class="form-group">
-                            <label >Choose content images</label>
-                            <div class="content-images"></div>
+                            <label>Sub Category</label>
+                            <input type="text" class="form-control" placeholder="Enter sub title..." >
+                        </div>
+                        <div class="form-group">
+                            <div class="main-image">
+                            </div>
+                        </div>
+                        <div class="btn-toolbar ">
+                            <button class="btn btn-success">Save</button>
+                            <button class="btn btn-warning">Update</button>
+                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-info">Search</button>
                         </div>
 
-
-                <div class="btn-toolbar ">
-                    <button class="btn btn-success">Save</button>
-                    <button class="btn btn-warning">Update</button>
-                    <button class="btn btn-danger">Delete</button>
-                    <button class="btn btn-info">Search</button>
-                </div>
                     </form>
                 </div>
             </div>
+
+
         </section>
-        <!-- /.content -->
+        <!--------------------------------------------- /.content ------------------------------------------------------------------------------------>
     </div>
     <!-- /.content-wrapper -->
 

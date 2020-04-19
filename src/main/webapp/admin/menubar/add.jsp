@@ -35,13 +35,13 @@
             </ol>
         </section>
 
-        <!-- Main content -->
+        <!-------------------------------------- Main content --------------------------------------------------------->
         <section class="content container-fluid">
 
-            <!-- OverView-->
             <div class="box box-warning">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Title Registration</h3>
+                    <h3 class="box-title">Navigation</h3>
+
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -49,26 +49,16 @@
                             <i class="fa fa-minus"></i></button>
                         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
                             <i class="fa fa-times"></i></button>
-
                     </div>
-                </div>
+                 </div>
+
                 <!-- /.box-header -->
                 <div class="box-body">
                     <form role="form">
                         <!-- text input -->
                         <div class="form-group">
-                            <label>Title</label>
-                            <input type="text" class="form-control" placeholder="Enter title...">
-                        </div>
-                        <div class="form-group">
-                            <label>Sub Title</label>
-                            <input type="text" class="form-control" placeholder="Enter sub title..." >
-                        </div>
-                        <div class="form-group">
-                            <label >Choose Overview main image</label>
-                            <div class="main-image">
-
-                            </div>
+                            <label>Main Topic</label>
+                            <input type="text" class="form-control" placeholder="Enter topic...">
                         </div>
 
                         <div class="btn-toolbar ">
@@ -77,19 +67,15 @@
                             <button class="btn btn-danger">Delete</button>
                             <button class="btn btn-info">Search</button>
                         </div>
-                            <!-- /btn-group -->
-
 
                     </form>
                 </div>
-
-
             </div>
 
 
             <div class="box box-warning">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Add Contents and Images</h3>
+                    <h3 class="box-title">Add Sub Topic Level 1</h3>
 
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -98,13 +84,14 @@
                         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
                             <i class="fa fa-times"></i></button>
                     </div>
+
                 </div>
                 <!-- /.box-header -->
 
                 <div class="box-body">
                     <form role="form">
                         <div class="form-group">
-                            <label>Title</label>
+                            <label>Select Main Topic</label>
                             <select class="form-control">
                                 <option>Title 1</option>
                                 <option>Title 2</option>
@@ -115,32 +102,88 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Sub Topic</label>
-                            <input type="text" class="form-control" placeholder="Enter sub title..." >
+                            <label>Add Sub Topic Level 1</label>
+                            <input type="text" class="form-control" placeholder="Enter sub topic..." >
                         </div>
 
-                        <!-- textarea -->
                         <div class="form-group">
-                            <label>Content</label>
-                            <textarea class="form-control" rows="3" placeholder="Enter content..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label >Choose content images</label>
-                            <div class="content-images"></div>
+                            <label>File Path</label>
+                            <input type="text" class="form-control" placeholder="Enter topic path..." >
                         </div>
 
+                        <div class="btn-toolbar ">
+                            <button class="btn btn-success">Save</button>
+                            <button class="btn btn-warning">Update</button>
+                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-info">Search</button>
+                        </div>
 
-                <div class="btn-toolbar ">
-                    <button class="btn btn-success">Save</button>
-                    <button class="btn btn-warning">Update</button>
-                    <button class="btn btn-danger">Delete</button>
-                    <button class="btn btn-info">Search</button>
-                </div>
                     </form>
                 </div>
             </div>
+
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Add Sub Topic Level 2</h3>
+
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                            <i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                            <i class="fa fa-times"></i></button>
+                    </div>
+
+
+                </div>
+                <!-- /.box-header -->
+
+                <div class="box-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label>Select Main Topic</label>
+                            <select class="form-control">
+                                <option>Title 1</option>
+                                <option>Title 2</option>
+                                <option>Title 3</option>
+                                <option>Title 4</option>
+                                <option>Title 5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Select Sub Topic Level 1</label>
+                            <select class="form-control">
+                                <option>Title 1</option>
+                                <option>Title 2</option>
+                                <option>Title 3</option>
+                                <option>Title 4</option>
+                                <option>Title 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Add Sub Topic Level 2</label>
+                            <input type="text" class="form-control" placeholder="Enter sub Topic Level 2..." >
+                        </div>
+
+                        <div class="form-group">
+                            <label>File Path</label>
+                            <input type="text" class="form-control" placeholder="Enter topic path..." >
+                        </div>
+
+                        <div class="btn-toolbar ">
+                            <button class="btn btn-success">Save</button>
+                            <button class="btn btn-warning">Update</button>
+                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-info">Search</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
         </section>
-        <!-- /.content -->
+        <!------------------------------------ /.content -------------------------------------------------------------->
     </div>
     <!-- /.content-wrapper -->
 

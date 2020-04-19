@@ -33,27 +33,47 @@
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Overview Manager</span>
+                <a href="#"><i class="fa fa-plus-square"></i> <span>Overview Manager</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${ROOT_ADMIN}overview/add.jsp">Add New</a></li>
-                    <li><a href="${ROOT_ADMIN}">View All</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-            <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+                <a href="#"><i class="fa fa-plus-square"></i> <span>Service Provider Index</span>
                     <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="#">Link in level 2</a></li>
-                    <li><a href="#">Link in level 2</a></li>
+                    <li><a href="${ROOT_ADMIN}Service_Provider_Index/add.jsp">Add New</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-plus-square"></i> <span>Menu Bar</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${ROOT_ADMIN}menubar/add.jsp">Add New</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-plus-square"></i> <span>User Registration</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${ROOT_ADMIN}user/add-user.jsp">Register New User</a></li>
+                    <li><a href="${ROOT_ADMIN}user/password.jsp">Change Password</a></li>
                 </ul>
             </li>
         </ul>
