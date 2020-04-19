@@ -3,7 +3,7 @@ package com.sl.web.model;
 import java.util.Collection;
 
 /**
- * Created by Achi on 4/14/2020.
+ * Created by Achi on 4/19/2020.
  */
 public class QuickIndex {
     private Integer id;

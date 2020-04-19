@@ -7,6 +7,7 @@
     <class name="com.sl.web.model.OverviewImages" table="overview_images" schema="webdb">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
+            <generator class="identity" />
         </id>
         <property name="path">
             <column name="path" sql-type="text" not-null="true"/>

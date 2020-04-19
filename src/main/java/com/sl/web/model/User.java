@@ -1,13 +1,16 @@
 package com.sl.web.model;
 
+import java.util.Collection;
+
 /**
- * Created by Achi on 4/14/2020.
+ * Created by Achi on 4/19/2020.
  */
 public class User {
     private Integer id;
     private String name;
     private String email;
     private String password;
+    private Collection<RestAuthentication> restAuthenticationsById;
 
     public Integer getId() {
         return id;
@@ -63,5 +66,13 @@ public class User {
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
+    }
+
+    public Collection<RestAuthentication> getRestAuthenticationsById() {
+        return restAuthenticationsById;
+    }
+
+    public void setRestAuthenticationsById(Collection<RestAuthentication> restAuthenticationsById) {
+        this.restAuthenticationsById = restAuthenticationsById;
     }
 }
