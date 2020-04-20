@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -38,6 +40,7 @@ public class Login extends HttpServlet {
 
             RestAuthentication restAuthentication = new RestAuthentication();
             restAuthentication.setRemoteAddress(request.getRemoteAddr());
+            restAuthentication.setDate(new Timestamp(new Date().getTime()));
             restAuthentication.setToken(token);
             restAuthentication.setUserByUserId(user);
 
