@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 public class Test {
     @GET
     public Response get(){
-        return Response.status(200).encoding("OKKKKKKKK").build();
+
+        return Response.status(200).entity("hello").build();
     }
 }

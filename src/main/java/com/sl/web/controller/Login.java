@@ -20,6 +20,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.UUID;
 
 @WebServlet(name = "Login", urlPatterns = "/login")
 public class Login extends HttpServlet {
@@ -35,8 +36,11 @@ public class Login extends HttpServlet {
             User user = (User) result;
             request.getSession().setAttribute("user", user);
 
-            Random random = new SecureRandom();
-            String token = new BigInteger(130, random).toString(32);
+//            Random random = new SecureRandom();
+//            String token = new BigInteger(130, random).toString(32);
+
+            UUID uuid = UUID.randomUUID();
+            String token = uuid.toString();
 
             RestAuthentication restAuthentication = new RestAuthentication();
             restAuthentication.setRemoteAddress(request.getRemoteAddr());
@@ -48,12 +52,12 @@ public class Login extends HttpServlet {
             session.save(restAuthentication);
             transaction.commit();
 
-            request.getSession().setAttribute("rest-token",token);
+            request.getSession().setAttribute("rest-token", token);
 
             response.sendRedirect("admin/index.jsp");
         } else {
-            MessageUtil messageUtil = new MessageUtil(MessageType.WARNING,"Invalid Username or Password");
-            request.getSession().setAttribute("message",messageUtil);
+            MessageUtil messageUtil = new MessageUtil(MessageType.WARNING, "Invalid Username or Password");
+            request.getSession().setAttribute("message", messageUtil);
             response.sendRedirect("admin/login.jsp");
         }
     }

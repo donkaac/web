@@ -1,6 +1,8 @@
 package com.sl.web.filter;
 
 import com.sl.web.constant.Secured;
+import com.sl.web.util.HibernateUtil;
+import org.hibernate.Session;
 
 import javax.annotation.Priority;
 import javax.servlet.http.HttpServletRequest;
@@ -44,6 +46,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
             // Validate the token
             validateToken(token);
 
+
         } catch (Exception e) {
             requestContext.abortWith(
                     Response.status(Response.Status.UNAUTHORIZED).build());
@@ -53,5 +56,12 @@ public class AuthenticationFilter implements ContainerRequestFilter {
     private void validateToken(String token) throws Exception {
         // Check if it was issued by the server and if it's not expired
         // Throw an Exception if the token is invalid
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Object result = session.createQuery("FROM RestAuthentication WHERE token=:token").setParameter("token", token).uniqueResult();
+        if (result == null){
+            throw new Exception("invalid Token");
+        }
+
     }
 }
