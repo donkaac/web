@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -16,7 +17,6 @@ import org.hibernate.criterion.Order;
 import org.hibernate.query.Query;
 
 /**
- *
  * @author Achi
  */
 public class DataController {
@@ -82,7 +82,7 @@ public class DataController {
             Root from = createQuery.from(entity);
             createQuery.select(from).
                     where(cb.equal(from.get(key), value));
-            List list = session.createQuery(createQuery).list();
+            List list = session.createQuery(createQuery).getResultList();
             return list;
         } catch (Exception e) {
             e.printStackTrace();
@@ -96,7 +96,7 @@ public class DataController {
             CriteriaQuery<T> query = builder.createQuery(type);
             Root<T> root = query.from(type);
             query.select(root).where(predicates);
-            List<T> list = session.createQuery(query).list();
+            List<T> list = session.createQuery(query).getResultList();
             return list;
         } catch (Exception e) {
             e.printStackTrace();
@@ -111,7 +111,7 @@ public class DataController {
             Root<T> root = query.from(type);
             query.select(root);
 
-            List<T> list = session.createQuery(query).list();
+            List<T> list = session.createQuery(query).getResultList();
             return list;
         } catch (Exception e) {
             return null;
@@ -198,7 +198,7 @@ public class DataController {
 
     public <T extends Object> List<T> Search(Class<T> type, String sql) {
         try {
-            Query query = session.createQuery(sql,type);
+            Query query = session.createQuery(sql, type);
             return query.list();
         } catch (Exception e) {
             return null;
@@ -212,7 +212,7 @@ public class DataController {
             Root root = query.from(type);
             query.select(builder.max(root.get("id")));
 
-            return session.createQuery(query).uniqueResult();
+            return session.createQuery(query).getSingleResult();
         } catch (Exception e) {
             return null;
         }
