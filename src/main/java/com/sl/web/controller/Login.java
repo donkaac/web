@@ -39,20 +39,20 @@ public class Login extends HttpServlet {
 //            Random random = new SecureRandom();
 //            String token = new BigInteger(130, random).toString(32);
 
-            UUID uuid = UUID.randomUUID();
-            String token = uuid.toString();
-
-            RestAuthentication restAuthentication = new RestAuthentication();
-            restAuthentication.setRemoteAddress(request.getRemoteAddr());
-            restAuthentication.setDate(new Timestamp(new Date().getTime()));
-            restAuthentication.setToken(token);
-            restAuthentication.setUserByUserId(user);
-
-            Transaction transaction = session.beginTransaction();
-            session.save(restAuthentication);
-            transaction.commit();
-
-            request.getSession().setAttribute("rest-token", token);
+//            UUID uuid = UUID.randomUUID();
+//            String token = uuid.toString();
+//
+//            RestAuthentication restAuthentication = new RestAuthentication();
+//            restAuthentication.setRemoteAddress(request.getRemoteAddr());
+//            restAuthentication.setDate(new Timestamp(new Date().getTime()));
+//            restAuthentication.setToken(token);
+//            restAuthentication.setUserByUserId(user);
+//
+//            Transaction transaction = session.beginTransaction();
+//            session.save(restAuthentication);
+//            transaction.commit();
+//
+//            request.getSession().setAttribute("rest-token", token);
 
             response.sendRedirect("admin/index.jsp");
         } else {

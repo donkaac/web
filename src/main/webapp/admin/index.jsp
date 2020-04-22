@@ -129,13 +129,5 @@
 </div>
 
 <%@include file="includes/scripts.jsp" %>
-<script>
-    $(function () {
-        <c:if test="${not empty sessionScope['rest-token']}">
-        sessionStorage.setItem("rest-token", "${sessionScope['rest-token']}");
-        <c:remove var="rest-token" scope="session"/>
-        </c:if>
-    });
-</script>
 </body>
 </html>

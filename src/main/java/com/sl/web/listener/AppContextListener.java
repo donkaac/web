@@ -14,6 +14,7 @@ public class AppContextListener implements ServletContextListener{
         ServletContext servletContext = servletContextEvent.getServletContext();
         servletContext.setAttribute("ROOT_ADMIN",servletContext.getContextPath()+"/admin/");
         servletContext.setAttribute("ROOT_USER",servletContext.getContextPath()+"/");
+        servletContext.setAttribute("REST_PATH",servletContext.getContextPath()+"/rest");
     }
 
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
