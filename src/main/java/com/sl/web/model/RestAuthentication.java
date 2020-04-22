@@ -1,10 +1,13 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.sql.Timestamp;
 
 /**
  * Created by Achi on 4/19/2020.
  */
+@JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
 public class RestAuthentication {
     private Integer id;
     private String token;

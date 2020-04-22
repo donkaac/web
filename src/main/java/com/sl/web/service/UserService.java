@@ -2,6 +2,7 @@ package com.sl.web.service;
 
 import com.sl.web.constant.Secured;
 import com.sl.web.util.DataController;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -19,7 +20,7 @@ public class UserService {
     DataController controller = new DataController();
 
     @GET
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         List<User> all = controller.getAll(User.class);
         return Response.status(200).entity(all).build();

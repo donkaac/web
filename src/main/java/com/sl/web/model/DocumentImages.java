@@ -1,8 +1,11 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Created by Achi on 4/19/2020.
  */
+@JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
 public class DocumentImages {
     private Integer id;
     private String path;
