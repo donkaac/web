@@ -1,5 +1,7 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Collection;
 
 /**
@@ -9,7 +11,9 @@ public class User {
     private Integer id;
     private String name;
     private String email;
+    @JsonIgnore
     private String password;
+    @JsonIgnore
     private Collection<RestAuthentication> restAuthenticationsById;
 
     public Integer getId() {
