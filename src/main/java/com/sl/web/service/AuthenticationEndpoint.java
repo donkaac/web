@@ -60,27 +60,20 @@ public class AuthenticationEndpoint {
         if (user != null) {
             List<RestAuthentication> authentications = session.createQuery("FROM RestAuthentication WHERE userByUserId=:user ORDER BY date desc", RestAuthentication.class).setParameter("user", user).list();
             if (authentications == null) {
-                UUID uuid = UUID.randomUUID();
-                token = uuid.toString();
-
-                RestAuthentication restAuthentication = new RestAuthentication();
-                restAuthentication.setRemoteAddress(request.getRemoteAddr());
-                restAuthentication.setDate(new Timestamp(date.getTime()));
-                restAuthentication.setToken(token);
-                restAuthentication.setUserByUserId(user);
-
-                Transaction transaction = session.beginTransaction();
-                session.save(restAuthentication);
-                transaction.commit();
-
+                token = issueToken(user, session);
             } else {
                 RestAuthentication authentication = authentications.get(0);
                 if (authentication.getRemoteAddress().equals(request.getRemoteAddr())) {
 
                     Date last_time = authentication.getDate();
                     String last_date = new SimpleDateFormat("dd-M-yyyy").format(last_time);
+
+                    System.out.println(toDay + " : " + last_date);
+
                     if (last_date.equals(toDay)) {
                         token = authentication.getToken();
+                    } else {
+                        token = issueToken(user, session);
                     }
                 }
             }
@@ -91,10 +84,25 @@ public class AuthenticationEndpoint {
         return token;
     }
 
-    private String issueToken(String email) {
+    private String issueToken(User user, Session session) {
         // Issue a token (can be a random String persisted to a database or a JWT token)
         // The issued token must be associated to a user
         // Return the issued token
-        return null;
+
+        UUID uuid = UUID.randomUUID();
+        String token = uuid.toString();
+
+        RestAuthentication restAuthentication = new RestAuthentication();
+        restAuthentication.setRemoteAddress(request.getRemoteAddr());
+        restAuthentication.setDate(new Timestamp(new Date().getTime()));
+        restAuthentication.setToken(token);
+        restAuthentication.setUserByUserId(user);
+
+        Transaction transaction = session.beginTransaction();
+        session.save(restAuthentication);
+        transaction.commit();
+
+
+        return token;
     }
 }

@@ -41,7 +41,7 @@
 
         </c:if>
 
-        <form action="${pageContext.request.contextPath}/login" id="login-form" method="post">
+        <form action="#" id="login-form" method="post">
             <div class="form-group has-feedback">
                 <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
