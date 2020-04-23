@@ -12,6 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -50,31 +51,39 @@ public class AuthenticationEndpoint {
         // Authenticate against a database, LDAP, file or whatever
         // Throw an Exception if the credentials are invalid
         String token = "";
+        Date date = new Date();
+        String toDay = new SimpleDateFormat("dd-M-yyyy").format(date);
+
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         User user = session.createQuery("FROM User WHERE email=:uname and password=:pass", User.class).setParameter("uname", email).setParameter("pass", password).uniqueResult();
         if (user != null) {
-//               List<RestAuthentication> authentications = session.createQuery("FROM RestAuthentication WHERE userByUserId=:user ORDER BY date desc", RestAuthentication.class).setParameter("user", user).list();
-//               if (authentications == null) {
-            UUID uuid = UUID.randomUUID();
-            token = uuid.toString();
+            List<RestAuthentication> authentications = session.createQuery("FROM RestAuthentication WHERE userByUserId=:user ORDER BY date desc", RestAuthentication.class).setParameter("user", user).list();
+            if (authentications == null) {
+                UUID uuid = UUID.randomUUID();
+                token = uuid.toString();
 
-            RestAuthentication restAuthentication = new RestAuthentication();
-            restAuthentication.setRemoteAddress(request.getRemoteAddr());
-            restAuthentication.setDate(new Timestamp(new Date().getTime()));
-            restAuthentication.setToken(token);
-            restAuthentication.setUserByUserId(user);
+                RestAuthentication restAuthentication = new RestAuthentication();
+                restAuthentication.setRemoteAddress(request.getRemoteAddr());
+                restAuthentication.setDate(new Timestamp(date.getTime()));
+                restAuthentication.setToken(token);
+                restAuthentication.setUserByUserId(user);
 
-            Transaction transaction = session.beginTransaction();
-            session.save(restAuthentication);
-            transaction.commit();
+                Transaction transaction = session.beginTransaction();
+                session.save(restAuthentication);
+                transaction.commit();
 
-//            } else {
-//                RestAuthentication authentication = authentications.get(0);
-//                if (authentication.getRemoteAddress().equals(request.getRemoteAddr()))
-//                    throw new Exception("invalid ")
-//                token = authentication.getToken();
-//            }
+            } else {
+                RestAuthentication authentication = authentications.get(0);
+                if (authentication.getRemoteAddress().equals(request.getRemoteAddr())) {
+
+                    Date last_time = authentication.getDate();
+                    String last_date = new SimpleDateFormat("dd-M-yyyy").format(last_time);
+                    if (last_date.equals(toDay)) {
+                        token = authentication.getToken();
+                    }
+                }
+            }
         } else {
             throw new Exception("credentials are invalid");
         }

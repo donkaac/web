@@ -127,7 +127,11 @@
 
     <%@include file="includes/footer.jsp" %>
 </div>
-
 <%@include file="includes/scripts.jsp" %>
+<script src="dist/js/app.js"></script>
+<script>
+    REST_PATH = "${REST_PATH}";
+    console.log(REST_PATH);
+</script>
 </body>
 </html>

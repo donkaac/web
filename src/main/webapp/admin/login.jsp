@@ -75,7 +75,9 @@
 <%@include file="includes/scripts.jsp" %>
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
+<script src="dist/js/app.js"></script>
 <script>
+    REST_PATH = "${REST_PATH}";
     $(function () {
         $('input').iCheck({
             checkboxClass: 'icheckbox_square-blue',
@@ -87,19 +89,10 @@
             var email = $("#email").val();
             var password = $("#password").val();
 
-            $.ajax({
-                url:"${REST_PATH}/auth",
-                type:"post",
-                dataType:"application/json",
-                data: {email: email, password: password},
-                success:function (data) {
-                    sessionStorage.setItem("rest-token", data.responseText);
-                    return true;
-                },
-                error:function (error) {
-                    return true;
-                }
-            });
+            auth(email,password);
+
+            return false;
+
         });
 
     });
