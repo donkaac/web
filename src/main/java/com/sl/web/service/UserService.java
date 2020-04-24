@@ -34,5 +34,4 @@ public class UserService {
         return Response.status(200).entity(user).build();
     }
 
-
 }
