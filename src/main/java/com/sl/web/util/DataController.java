@@ -55,10 +55,11 @@ public class DataController {
         try {
             Transaction tx = session.beginTransaction();
             Object load = session.load(entity, id);
+            Hibernate.initialize(load);
             tx.commit();
             return load;
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return null;
         }
     }
@@ -66,9 +67,10 @@ public class DataController {
     public <T extends Object> T getById(Class<T> type, int id) {
         try {
             Object load = session.load(type, id);
+            Hibernate.initialize(load);
             return (T) load;
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return null;
         }
     }
