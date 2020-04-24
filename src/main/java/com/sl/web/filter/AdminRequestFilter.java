@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @WebFilter(filterName = "AdminRequestFilter", urlPatterns = "/admin/*")
 public class AdminRequestFilter implements Filter {
-    public static String[] ALLOWED_PATH = {"/login","/bower_components","/build", "/dist", "/plugins", "/includes"};
+    public static String[] ALLOWED_PATH = {"/login", "/bower_components", "/build", "/dist", "/plugins", "/includes"};
 
     public void destroy() {
     }
@@ -39,7 +39,7 @@ public class AdminRequestFilter implements Filter {
         if (loggedIn || allowedPath) {
             chain.doFilter(req, resp);
         } else {
-            response.sendRedirect(request.getContextPath()+"/admin/login.jsp");
+            response.sendRedirect(request.getContextPath() + "/admin/login.jsp");
         }
 
     }

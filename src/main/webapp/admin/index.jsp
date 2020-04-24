@@ -131,7 +131,9 @@
 <script src="dist/js/app.js"></script>
 <script>
     REST_PATH = "${REST_PATH}";
-    console.log(REST_PATH);
+    <c:if test="${not empty sessionScope['rest-token']}">
+    sessionStorage.setItem("rest-token", "${sessionScope['rest-token']}");
+    </c:if>
 </script>
 </body>
 </html>

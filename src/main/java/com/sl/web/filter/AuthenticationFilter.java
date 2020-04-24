@@ -60,7 +60,7 @@ public class AuthenticationFilter implements ContainerRequestFilter {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         Object result = session.createQuery("FROM RestAuthentication WHERE token=:token").setParameter("token", token).uniqueResult();
-        if (result == null){
+        if (result == null) {
             throw new Exception("invalid Token");
         }
 

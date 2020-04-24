@@ -41,7 +41,7 @@
 
         </c:if>
 
-        <form action="#" id="login-form" method="post">
+        <form action="${pageContext.request.contextPath}/login" id="login-form" method="post">
             <div class="form-group has-feedback">
                 <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -85,15 +85,15 @@
             increaseArea: '20%' /* optional */
         });
 
-        $('#login-form').on("submit", function () {
-            var email = $("#email").val();
-            var password = $("#password").val();
-
-            auth(email,password);
-
-            return false;
-
-        });
+//        $('#login-form').on("submit", function () {
+//            var email = $("#email").val();
+//            var password = $("#password").val();
+//
+//            auth(email, password);
+//
+//            return false;
+//
+//        });
 
     });
 </script>

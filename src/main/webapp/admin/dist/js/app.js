@@ -20,7 +20,7 @@ function auth(email, password) {
 }
 
 function getToken() {
-    let token = sessionStorage.getItem("aaa");
+    let token = sessionStorage.getItem("rest-token");
     if(token == null){
         throw new Error("REST Authentication Token Error!");
     }else{
