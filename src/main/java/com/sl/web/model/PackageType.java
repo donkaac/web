@@ -1,5 +1,6 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
@@ -13,7 +14,19 @@ public class PackageType {
     private String packageType;
     private String description;
     private Double price;
+
+    @JsonIgnore
     private Collection<ServiceProvider> serviceProvidersById;
+
+
+    public PackageType() {
+    }
+
+    public PackageType(String packageType, String description, Double price) {
+        this.packageType = packageType;
+        this.description = description;
+        this.price = price;
+    }
 
     public Integer getId() {
         return id;

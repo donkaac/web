@@ -12,6 +12,13 @@ public class OverviewImages {
     private Integer overviewId;
     private Overview overviewByOverviewId;
 
+    public OverviewImages() {
+    }
+
+    public OverviewImages(String path) {
+        this.path = path;
+    }
+
     public Integer getId() {
         return id;
     }

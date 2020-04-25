@@ -12,6 +12,13 @@ public class DocumentImages {
     private Integer documentId;
     private Document documentByDocumentId;
 
+    public DocumentImages(String path) {
+        this.path = path;
+    }
+
+    public DocumentImages() {
+    }
+
     public Integer getId() {
         return id;
     }

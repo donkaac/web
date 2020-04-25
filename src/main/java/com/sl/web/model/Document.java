@@ -1,5 +1,6 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
@@ -13,7 +14,16 @@ public class Document {
     private String content;
     private Integer menuId;
     private Menu menuByMenuId;
+    @JsonIgnore
     private Collection<DocumentImages> documentImagesById;
+
+    public Document() {
+    }
+
+    public Document(String content, Integer menuId) {
+        this.content = content;
+        this.menuId = menuId;
+    }
 
     public Integer getId() {
         return id;

@@ -1,5 +1,6 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
@@ -17,7 +18,21 @@ public class Overview {
     private String content;
     private String subOverview;
     private Byte parent;
+
+    @JsonIgnore
     private Collection<OverviewImages> overviewImagesById;
+
+    public Overview() {
+    }
+
+    public Overview(String title, String subtitle, String mainImage, String link, String content, String subOverview) {
+        this.title = title;
+        this.subtitle = subtitle;
+        this.mainImage = mainImage;
+        this.link = link;
+        this.content = content;
+        this.subOverview = subOverview;
+    }
 
     public Integer getId() {
         return id;

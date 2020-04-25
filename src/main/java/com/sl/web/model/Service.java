@@ -1,5 +1,6 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
@@ -13,8 +14,20 @@ public class Service {
     private String name;
     private String content;
     private String slideShowImages;
+
+    @JsonIgnore
     private Collection<ServiceImages> serviceImagesById;
+    @JsonIgnore
     private Collection<ServiceProvider> serviceProvidersById;
+
+    public Service() {
+    }
+
+    public Service(String name, String content, String slideShowImages) {
+        this.name = name;
+        this.content = content;
+        this.slideShowImages = slideShowImages;
+    }
 
     public Integer getId() {
         return id;
