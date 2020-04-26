@@ -4,7 +4,7 @@
 
         <div class="logo mr-auto">
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href="index.html"><img src="assets/img/logo.jpg" alt="" class="img-fluid"></a>
+            <a href="index.jsp"><img src="assets/img/logo.jpg" alt="" class="img-fluid"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
