@@ -1,5 +1,6 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
@@ -12,7 +13,16 @@ public class Menu {
     private Integer id;
     private String name;
     private Integer parent;
+
+    @JsonIgnore
     private Collection<Document> documentsById;
+
+    public Menu(){
+
+    }
+    public Menu(String name){
+
+    }
 
     public Integer getId() {
         return id;

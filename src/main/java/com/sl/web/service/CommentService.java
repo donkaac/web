@@ -1,44 +1,37 @@
 package com.sl.web.service;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.sl.web.constant.Secured;
+import com.sl.web.model.Comments;
 import com.sl.web.util.DataController;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import com.sl.web.model.*;
 
 
-@Secured
-@Path("/user")
-public class UserService {
+@Path("/comment")
+public class CommentService {
     private DataController controller;
 
-    public UserService() {
-        controller = new DataController();
+    public CommentService() {
+        controller=new DataController();
     }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll() {
-        List<User> all = controller.getAll(User.class);
-        return Response.status(200).entity(all).build();
+    public Response getAll(){
+        List<Comments> all = controller.getAll(Comments.class);
+        return Response.ok().entity(all).build();
     }
 
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getById(@PathParam("id") Integer id) {
-        User user = controller.getById(User.class, id);
-        return Response.status(200).entity(user).build();
+    public Response getById(@PathParam("id")Integer id){
+        Comments byId = controller.getById(Comments.class, id);
+return Response.ok().entity(byId).build();
     }
 
     @POST
@@ -50,10 +43,10 @@ public class UserService {
         JsonObject object = JsonParser.parseString(data).getAsJsonObject();
 
         String name = object.get("name").getAsString();
-        String email = object.get("email").getAsString();
+        String userComment = object.get("comment").getAsString();
 
-        User user = new User(name, email, email);
-        boolean save = controller.save(user);
+        Comments comment = new Comments(name, userComment);
+        boolean save = controller.save(comment);
         if (save) {
             return Response.ok().entity("true").build();
         } else {
@@ -61,5 +54,4 @@ public class UserService {
         }
 
     }
-
 }

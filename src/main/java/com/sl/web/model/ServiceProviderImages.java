@@ -13,6 +13,14 @@ public class ServiceProviderImages {
     private Integer serviceProviderId;
     private ServiceProvider serviceProviderByServiceProviderId;
 
+    public ServiceProviderImages() {
+    }
+
+    public ServiceProviderImages(String path, Byte isLogo) {
+        this.path = path;
+        this.isLogo = isLogo;
+    }
+
     public Integer getId() {
         return id;
     }

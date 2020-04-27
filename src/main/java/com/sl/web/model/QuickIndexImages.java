@@ -12,6 +12,13 @@ public class QuickIndexImages {
     private Integer quickIndexId;
     private QuickIndex quickIndexByQuickIndexId;
 
+    public QuickIndexImages() {
+    }
+
+    public QuickIndexImages(String path) {
+        this.path = path;
+    }
+
     public Integer getId() {
         return id;
     }

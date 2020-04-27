@@ -12,6 +12,13 @@ public class NewsImages {
     private Integer newsId;
     private News newsByNewsId;
 
+    public NewsImages() {
+    }
+
+    public NewsImages(String path) {
+        this.path = path;
+    }
+
     public Integer getId() {
         return id;
     }

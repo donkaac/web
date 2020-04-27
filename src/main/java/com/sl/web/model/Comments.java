@@ -14,6 +14,14 @@ public class Comments {
     private Timestamp date;
     private String comment;
 
+    public Comments() {
+    }
+
+    public Comments(String name, String comment) {
+        this.name = name;
+        this.comment = comment;
+    }
+
     public Integer getId() {
         return id;
     }

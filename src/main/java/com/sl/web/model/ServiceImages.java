@@ -12,6 +12,13 @@ public class ServiceImages {
     private Integer serviceId;
     private Service serviceByServiceId;
 
+    public ServiceImages() {
+    }
+
+    public ServiceImages(String path) {
+        this.path = path;
+    }
+
     public Integer getId() {
         return id;
     }

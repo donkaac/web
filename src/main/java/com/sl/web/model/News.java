@@ -1,5 +1,6 @@
 package com.sl.web.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Collection;
@@ -12,7 +13,17 @@ public class News {
     private Integer id;
     private String title;
     private String content;
+
+    @JsonIgnore
     private Collection<NewsImages> newsImagesById;
+
+    public News() {
+    }
+
+    public News(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 
     public Integer getId() {
         return id;
