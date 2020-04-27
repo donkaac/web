@@ -39,7 +39,8 @@
               </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="${ROOT_ADMIN}overview/add.jsp">Add New</a></li>
+                    <li><a href="${ROOT_ADMIN}overview/add.jsp"><i class="fa fa-plus"></i>Add New</a></li>
+                    <li><a href="${ROOT_ADMIN}overview/list.jsp"><i class="fa fa-table"></i>List</a></li>
                 </ul>
             </li>
 

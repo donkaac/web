@@ -133,6 +133,7 @@
     REST_PATH = "${REST_PATH}";
     <c:if test="${not empty sessionScope['rest-token']}">
     sessionStorage.setItem("rest-token", "${sessionScope['rest-token']}");
+    <c:remove var="rest-token" scope="session"/>
     </c:if>
 </script>
 </body>
