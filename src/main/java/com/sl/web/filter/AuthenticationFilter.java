@@ -1,6 +1,7 @@
 package com.sl.web.filter;
 
 import com.sl.web.constant.Secured;
+import com.sl.web.model.RestAuthentication;
 import com.sl.web.util.HibernateUtil;
 import org.hibernate.Session;
 
@@ -59,8 +60,8 @@ public class AuthenticationFilter implements ContainerRequestFilter {
         // Throw an Exception if the token is invalid
 
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Object result = session.createQuery("FROM RestAuthentication WHERE token=:token").setParameter("token", token).uniqueResult();
-        if (result == null) {
+        RestAuthentication restAuthentication = session.createQuery("FROM RestAuthentication WHERE token=:token", RestAuthentication.class).setParameter("token", token).uniqueResult();
+        if (restAuthentication == null) {
             throw new Exception("invalid Token");
         }
 
