@@ -75,6 +75,7 @@
                 <ul class="treeview-menu">
                     <li><a href="${ROOT_ADMIN}user/add-user.jsp">Register New User</a></li>
                     <li><a href="${ROOT_ADMIN}user/password.jsp">Change Password</a></li>
+                    <li><a href="${ROOT_ADMIN}user/list.jsp">User List</a></li>
                 </ul>
             </li>
 

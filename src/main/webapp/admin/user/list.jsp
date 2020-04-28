@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: RAC
-  Date: 4/11/2020
-  Time: 2:13 PM
+  User: Lakdimuthu
+  Date: 4/28/2020
+  Time: 9:11 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -26,8 +26,8 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Overview
-                <small>All overview in the database.</small>
+                User List
+                <small>All users in the database.</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
@@ -48,25 +48,15 @@
                                 <thead>
                                 <tr>
                                     <th data-orderable=true>
-                                        Title
+                                        Name
                                     </th>
                                     <th data-orderable=true>
-                                        Sub Title
+                                        Email
                                     </th>
-                                    <th data-orderable=true>
-                                        Main Image
-                                    </th>
-                                    <th data-orderable=true>
-                                        Link
-                                    </th>
-                                    <th data-orderable=true>
-                                        View Content
-                                    </th>
-                                    <th data-orderable="false">Actions</th>
                                 </tr>
                                 </thead>
 
-                                <tbody id="overview-all">
+                                <tbody id="user-all">
 
 
                                 </tbody>
@@ -166,7 +156,7 @@
 <%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
 <script type="text/javascript"
         src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"></script>
-<script src="${ROOT_ADMIN}dist/js/pages/overview.js"></script>
+<script src="${ROOT_ADMIN}dist/js/pages/user.js"></script>
 <script>
     $(function () {
         $(".main-image").imageUploader();

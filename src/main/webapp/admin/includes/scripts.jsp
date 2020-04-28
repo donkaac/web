@@ -5,3 +5,5 @@
 <script src="${ROOT_ADMIN}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="${ROOT_ADMIN}dist/js/adminlte.min.js"></script>
+
+<script src="${ROOT_ADMIN}dist/js/app.js"></script>
