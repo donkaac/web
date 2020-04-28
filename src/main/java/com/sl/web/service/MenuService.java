@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.awt.*;
 import java.util.List;
-
+@Path("/menu")
 public class MenuService {
     private DataController controller;
 
@@ -28,8 +28,16 @@ public class MenuService {
        return Response.ok().entity(all).build();
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        Menu menu = controller.getById(Menu.class, id);
+        return Response.status(200).entity(menu).build();
+    }
+
     @POST
-    @Path("/menu")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data){

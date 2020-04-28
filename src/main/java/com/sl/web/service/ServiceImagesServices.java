@@ -10,7 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
+@Path("/service_images")
 public class ServiceImagesServices {
     private DataController controller;
 
@@ -26,8 +26,16 @@ public class ServiceImagesServices {
 
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        ServiceImages serviceImages = controller.getById(ServiceImages.class, id);
+        return Response.status(200).entity(serviceImages).build();
+    }
+
     @POST
-    @Path("/serviceimages")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data) {

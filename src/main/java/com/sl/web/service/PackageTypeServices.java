@@ -10,7 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
+@Path("/package_types")
 public class PackageTypeServices {
     private DataController controller;
 
@@ -26,8 +26,16 @@ public class PackageTypeServices {
 
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        PackageType packageType = controller.getById(PackageType.class, id);
+        return Response.status(200).entity(packageType).build();
+    }
+
     @POST
-    @Path("/packagetypes")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data) {

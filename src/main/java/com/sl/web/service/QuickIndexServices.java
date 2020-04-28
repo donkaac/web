@@ -9,7 +9,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
+@Path("/quick_index")
 public class QuickIndexServices {
     private DataController controller;
 
@@ -25,8 +25,16 @@ public class QuickIndexServices {
 
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        QuickIndex quickIndex = controller.getById(QuickIndex.class, id);
+        return Response.status(200).entity(quickIndex).build();
+    }
+
     @POST
-    @Path("/quickindex")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data) {

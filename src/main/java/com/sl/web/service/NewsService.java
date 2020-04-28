@@ -11,7 +11,7 @@ import javax.enterprise.inject.New;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
+@Path("/news")
 public class NewsService {
     private DataController controller;
 
@@ -27,8 +27,16 @@ public class NewsService {
 
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        News news = controller.getById(News.class, id);
+        return Response.status(200).entity(news).build();
+    }
+
     @POST
-    @Path("/news")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data) {

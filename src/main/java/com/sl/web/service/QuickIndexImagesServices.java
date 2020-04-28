@@ -10,7 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
+@Path("/quick_index_images")
 public class QuickIndexImagesServices {
 
     private DataController controller;
@@ -27,8 +27,16 @@ public class QuickIndexImagesServices {
 
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        QuickIndexImages quickIndexImages = controller.getById(QuickIndexImages.class, id);
+        return Response.status(200).entity(quickIndexImages).build();
+    }
+
     @POST
-    @Path("/quickindeximages")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data) {

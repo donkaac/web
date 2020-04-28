@@ -12,7 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
-
+@Path("/document")
 public class DocumentService {
 private DataController controller;
 
@@ -27,8 +27,16 @@ private DataController controller;
         return Response.ok().entity(all).build();
     }
 
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id) {
+        Document document = controller.getById(Document.class, id);
+        return Response.status(200).entity(document).build();
+    }
+
     @POST
-    @Path("/document")
+    @Path("/add")
     @Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     @Produces(MediaType.TEXT_PLAIN)
     public Response add(String data) {
