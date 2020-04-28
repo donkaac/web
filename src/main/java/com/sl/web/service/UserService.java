@@ -17,7 +17,7 @@ import java.util.Set;
 import com.sl.web.model.*;
 
 
-@Secured
+
 @Path("/user")
 public class UserService {
     private DataController controller;

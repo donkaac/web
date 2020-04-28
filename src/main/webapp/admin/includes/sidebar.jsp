@@ -52,6 +52,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${ROOT_ADMIN}Service_Provider_Index/add.jsp">Add New</a></li>
+                    <li><a href="${ROOT_ADMIN}Service_Provider_Index/list.jsp">Services Category List</a></li>
                 </ul>
             </li>
 
@@ -63,6 +64,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="${ROOT_ADMIN}menubar/add.jsp">Add New</a></li>
+                    <li><a href="${ROOT_ADMIN}menubar/list.jsp">Menu List</a></li>
                 </ul>
             </li>
 

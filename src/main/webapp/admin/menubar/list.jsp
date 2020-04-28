@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Lakdimuthu
   Date: 4/28/2020
-  Time: 9:11 PM
+  Time: 10:29 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -26,12 +26,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                User List
-                <small>All users in the database.</small>
+                Menu Category
+                <small>All Menu Category in the database.</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                <li><a href="#">User Registration</a></li>
+                <li><a href="#">Menu Category</a></li>
                 <li class="active">List</li>
             </ol>
         </section>
@@ -48,15 +48,12 @@
                                 <thead>
                                 <tr>
                                     <th data-orderable=true>
-                                        Name
-                                    </th>
-                                    <th data-orderable=true>
-                                        Email
+                                        Menu Category List
                                     </th>
                                 </tr>
                                 </thead>
 
-                                <tbody id="user-all">
+                                <tbody id="menu-all">
 
 
                                 </tbody>
@@ -156,7 +153,7 @@
 <%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
 <script type="text/javascript"
         src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"></script>
-<script src="${ROOT_ADMIN}dist/js/pages/user.js"></script>
+<script src="${ROOT_ADMIN}dist/js/pages/menu.js"></script>
 <script>
     $(function () {
         $(".main-image").imageUploader();
