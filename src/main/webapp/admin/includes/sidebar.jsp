@@ -103,6 +103,17 @@
                     <li><a href="${ROOT_ADMIN}image_galary/add_galary_images.jsp">Add Image Galary Images</a></li>
                 </ul>
             </li>
+
+            <li class="treeview">
+                <a href="#"><i class="fa fa-plus-square"></i> <span>Comments</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="${ROOT_ADMIN}comments/list.jsp">View Comments</a></li>
+                </ul>
+            </li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>
