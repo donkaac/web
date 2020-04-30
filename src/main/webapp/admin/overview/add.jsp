@@ -53,9 +53,12 @@
                     </div>
                 </div>
                 <!-- /.box-header -->
+
                 <div class="box-body">
                     <form role="form">
                         <!-- text input -->
+
+                        <div class="col-md-4">
                         <div class="form-group">
                             <label>Title</label>
                             <input type="text" class="form-control" placeholder="Enter title...">
@@ -69,14 +72,31 @@
                             <div class="main-image">
 
                             </div>
-                        </div>
-
+  </div>
                         <div class="btn-toolbar ">
-                            <button class="btn btn-success">Save</button>
-                            <button class="btn btn-warning">Update</button>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-info">Search</button>
+                            <button class="btn btn-success">Save Title</button>
                         </div>
+                    </div>
+                            <div class="box-body form-group  col-md-8">
+                                <table id="menu-tabel" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Main Title List</th>
+                                        <th>Sub Title List</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="overview-all-titles">
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+
+
+
                             <!-- /btn-group -->
 
 
@@ -105,12 +125,8 @@
                     <form role="form">
                         <div class="form-group">
                             <label>Title</label>
-                            <select class="form-control">
-                                <option>Title 1</option>
-                                <option>Title 2</option>
-                                <option>Title 3</option>
-                                <option>Title 4</option>
-                                <option>Title 5</option>
+                            <select class="form-control " id="overview-all-to-sub-topic">
+
                             </select>
                         </div>
 
@@ -228,10 +244,16 @@
 <%@include file="../includes/scripts.jsp" %>
 <%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
 <script type="text/javascript" src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"></script>
+<script src="${ROOT_ADMIN}dist/js/pages/overview.js"></script>
 <script>
     $(function () {
         $(".main-image").imageUploader();
         $(".content-images").imageUploader();
+
+        REST_PATH = "${REST_PATH}";
+
+        loadTopics();
+        loadTopicsToAddContent();
     })
 </script>
 </body>

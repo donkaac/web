@@ -2,20 +2,21 @@ function loadAll() {
     $.ajax({
         url : REST_PATH + "/comment",
         type : "get",
-        source : function (data) {
+        success : function (data) {
+            console.log("OK")
             let data_set="";
             for(let i of data){
                 data_set += `<tr>
                 <td>${i.name}</td>
                 <td>${i.date}</td>
-                <td>${i.name}</td>
+                <td>${i.comment}</td>
                 </tr>`
             }
             $("#comments-all").html(data_set);
         },
 
-        err : function () {
-
+        error : function () {
+            console.log("error")
         }
     })
 }

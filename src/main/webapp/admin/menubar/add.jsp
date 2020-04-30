@@ -15,6 +15,7 @@
     <title>AdminLTE 3 | Starter</title>
     <%@ include file="../includes/styles.jsp" %>
     <link rel="stylesheet" href="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.css">
+    <link rel="stylesheet" href="${ROOT_ADMIN}bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -50,22 +51,42 @@
                         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
                             <i class="fa fa-times"></i></button>
                     </div>
-                 </div>
 
+                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <form role="form">
                         <!-- text input -->
-                        <div class="form-group">
+                        <div class="row">
+                        <div class="form-group col-md-6">
                             <label>Main Topic</label>
                             <input type="text" class="form-control" placeholder="Enter topic...">
-                        </div>
 
-                        <div class="btn-toolbar ">
-                            <button class="btn btn-success">Save</button>
-                            <button class="btn btn-warning">Update</button>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-info">Search</button>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <button class="btn btn-success">Save</button>
+
+                            </div>
+                        </div>
+                            <div class="row">
+                            <div class="box-body form-group  col-md-6">
+ <table id="menu-tabel" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Main Topics List</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="menu-names">
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
                         </div>
 
                     </form>
@@ -92,12 +113,8 @@
                     <form role="form">
                         <div class="form-group">
                             <label>Select Main Topic</label>
-                            <select class="form-control">
-                                <option>Title 1</option>
-                                <option>Title 2</option>
-                                <option>Title 3</option>
-                                <option>Title 4</option>
-                                <option>Title 5</option>
+                            <select class="form-control menu-names-to-category" >
+
                             </select>
                         </div>
 
@@ -142,18 +159,14 @@
                     <form role="form">
                         <div class="form-group">
                             <label>Select Main Topic</label>
-                            <select class="form-control">
-                                <option>Title 1</option>
-                                <option>Title 2</option>
-                                <option>Title 3</option>
-                                <option>Title 4</option>
-                                <option>Title 5</option>
+                            <select class="form-control menu-names-to-category" >
+
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>Select Sub Topic Level 1</label>
-                            <select class="form-control">
+                            <select class="form-control ">
                                 <option>Title 1</option>
                                 <option>Title 2</option>
                                 <option>Title 3</option>
@@ -271,11 +284,21 @@
 <%@include file="../includes/scripts.jsp" %>
 <%--<script src="${ROOT_ADMIN}bower_components/jquery-ui/jquery-ui.min.js"></script>--%>
 <script type="text/javascript" src="${ROOT_ADMIN}bower_components/drag-drop-image-uploader/dist/image-uploader.min.js"></script>
+<script src="${ROOT_ADMIN}bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="${ROOT_ADMIN}bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="${ROOT_ADMIN}dist/js/pages/menu.js"></script>
 <script>
     $(function () {
         $(".main-image").imageUploader();
         $(".content-images").imageUploader();
+
+        REST_PATH = "${REST_PATH}";
+
+        loadTopics();
+
+        loadTopicsForSubCategory();
     })
+
 </script>
 </body>
 </html>
